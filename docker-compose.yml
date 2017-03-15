@@ -6,63 +6,22 @@ services:
     ports:
      - "8080:8080"
     networks:
-      scada-ot-1:
-        ipv4_address: 172.16.238.2
+     - scada-ot-1
     links:
-      - "plc1"
-      - "plc2"
-      - "switch1"
+      - plc1
+      - plc2
 
   plc1:
     build: https://github.com/sintax1/docker-modbus-plc-simulator.git
     image: "sintax1/modbus-plc-simulator-1"
     networks:
-      scada-ot-2:
-        ipv4_address: 172.16.238.10
+      - scada-ot-1
 
   plc2:
     build: https://github.com/sintax1/docker-modbus-plc-simulator.git
     image: "sintax1/modbus-plc-simulator-2"
     networks: 
-      scada-ot-3:
-        ipv4_address: 172.16.238.11
-
-  switch1:
-    image: socketplane/openvswitch:2.4.0
-    cap_add:
-      - NET_ADMIN
-    networks:
-     - scada-ot-1
-     - scada-ot-2
-     - scada-ot-4
+      - scada-ot-1
 
 networks:
   scada-ot-1:
-    driver: overlay
-    ipam:
-      config:
-        - subnet: 17.16.0.0/16
-          gateway: 17.16.5.254
-      #Use a custom driver
-      #driver: custom-driver-1
-  scada-ot-2:
-    driver: overlay
-    ipam:
-      config:
-        - subnet: 17.16.0.0/16
-          gateway: 17.16.5.254
-      # Use a custom driver which takes special options
-      #driver: custom-driver-2
-  scada-ot-3:
-    driver: overlay
-    ipam:
-      config:
-        - subnet: 17.16.0.0/16
-          gateway: 17.16.5.254
-  scada-ot-4:
-    driver: overlay
-    ipam:
-      config:
-        - subnet: 17.16.0.0/16
-          gateway: 17.16.5.254
-
