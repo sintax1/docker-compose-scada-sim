@@ -9,18 +9,11 @@ services:
      - scada-ot-1
     links:
       - plc1
-      - plc2
 
   plc1:
     build: https://github.com/sintax1/docker-modbus-plc-simulator.git
     image: "sintax1/modbus-plc-simulator-1"
     networks:
-      - scada-ot-1
-
-  plc2:
-    build: https://github.com/sintax1/docker-modbus-plc-simulator.git
-    image: "sintax1/modbus-plc-simulator-2"
-    networks: 
       - scada-ot-1
 
 networks:
