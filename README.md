@@ -4,7 +4,7 @@
 
 1. Install Docker + Docker Compose
 
-..+ [Install Instructions](https://docs.docker.com/compose/install/)
+.. [Install Instructions](https://docs.docker.com/compose/install/)
 
 2. Build & Run the containers
 ```bash
