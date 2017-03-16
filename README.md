@@ -1,4 +1,4 @@
-# Scada Simulator
+# SCADA Simulator
 This is a docker compose configuration for running a SCADA simulated environment.
 
 ## Running the Scada Simulator
