@@ -10,7 +10,7 @@
 ```bash
 [docker host]$ git clone https://github.com/sintax1/docker-compose-scada-sim.git
 [docker host]$ cd docker-compose-scada-sim
-[docker host]$ docker-compose run < docker-compose.yml
+[docker host]$ docker-compose up
 ```
 3. Load the configuration into Mango HMI
     [Mango Config](https://github.com/sintax1/mango-automation-configs/blob/master/config.json)
