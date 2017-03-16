@@ -12,7 +12,13 @@
 [docker host]$ cd docker-compose-scada-sim
 [docker host]$ docker-compose up
 ```
-3. Load the configuration into Mango HMI
+
+3. Navigate to the Mango HMI
+```
+http://[docker host IP]:8080
+```
+
+4. Load the configuration into Mango HMI
     [Mango Config](https://github.com/sintax1/mango-automation-configs/blob/master/config.json)
 
 
