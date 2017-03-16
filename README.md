@@ -20,6 +20,7 @@ http://[docker host IP]:8080
 ```
 
 4. Load the configuration into the HMI
+    
     [Mango Config](https://github.com/sintax1/mango-automation-configs/blob/master/config.json)
 
 
