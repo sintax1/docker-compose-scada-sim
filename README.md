@@ -23,7 +23,7 @@ http://[docker host IP]:8080
 
 
 ## Notes:
-- Capture the scada traffic by sniffing on docker 'scada-ot-1' network instarface
+### Capture the scada traffic by sniffing on docker 'scada-ot-1' network instarface
 ```bash
 [docker host]$ tcpdump -i br-$(docker network ls --filter "name=.*scada-ot-1" --format "{{.ID}}")
 ```
