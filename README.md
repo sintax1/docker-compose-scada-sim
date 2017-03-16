@@ -27,7 +27,7 @@ password: admin
      [Water Plant config](https://github.com/sintax1/mango-automation-configs/blob/master/config.json)
 
 ```
-http://[docker host IP]:8080/emport.shtm
+http://[docker host IP]:8080/dashboards/settings/import-export
 ```
 
 5. View the dashboard
