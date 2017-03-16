@@ -22,13 +22,12 @@ username: admin
 password: admin
 ```
 
-4. Load the configuration into the HMI
-    
+4. Load a configuration into the HMI
 ```
 http://[docker host IP]:8080/emport.shtm
-    
-    [Mango Config](https://github.com/sintax1/mango-automation-configs/blob/master/config.json)
 ```
+
+    [Water Plant config](https://github.com/sintax1/mango-automation-configs/blob/master/config.json)
 
 5. View the dashboard
 
