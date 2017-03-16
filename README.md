@@ -23,15 +23,16 @@ password: admin
 ```
 
 4. Load a configuration into the HMI
+
+     [Water Plant config](https://github.com/sintax1/mango-automation-configs/blob/master/config.json)
+
 ```
 http://[docker host IP]:8080/emport.shtm
 ```
 
-   [Water Plant config](https://github.com/sintax1/mango-automation-configs/blob/master/config.json)
-
 5. View the dashboard
 
-   [Water Plant Dashboard](http://172.16.201.129:8080/dashboards/waterplant)
+    [Water Plant Dashboard](http://172.16.201.129:8080/dashboards/waterplant)
 
 ## Notes
 ### Capture the scada traffic by sniffing on docker 'scada-ot-1' network instarface
