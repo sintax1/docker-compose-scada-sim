@@ -14,9 +14,9 @@ This is a docker compose configuration for running a SCADA simulated environment
 [docker host]$ docker-compose up
 ```
 
-3. Navigate to the Mango HMI
+3. Login to the Mango HMI
 ```
-http://[docker host IP]:8080
+http://[docker host IP]:8080/login.htm
 
 username: admin
 password: admin
@@ -24,8 +24,15 @@ password: admin
 
 4. Load the configuration into the HMI
     
+```
+http://[docker host IP]:8080/emport.shtm
+    
     [Mango Config](https://github.com/sintax1/mango-automation-configs/blob/master/config.json)
+```
 
+5. View the dashboard
+
+    [Water Plant Dashboard](http://172.16.201.129:8080/dashboards/waterplant)
 
 ## Notes
 ### Capture the scada traffic by sniffing on docker 'scada-ot-1' network instarface
