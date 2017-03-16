@@ -3,6 +3,7 @@
 ## Running the Scada Simulator
 
 1. Install Docker + Docker Compose
+
 ..+ [Install Instructions](https://docs.docker.com/compose/install/)
 
 2. Build & Run the containers
