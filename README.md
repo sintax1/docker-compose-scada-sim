@@ -31,8 +31,9 @@ http://[docker host IP]:8080/emport.shtm
 ```
 
 5. View the dashboard
-
-    [Water Plant Dashboard](http://172.16.201.129:8080/dashboards/waterplant)
+```
+    http://[docker host IP]:8080/dashboards/waterplant
+```
 
 ## Notes
 ### Capture the scada traffic by sniffing on docker 'scada-ot-1' network instarface
