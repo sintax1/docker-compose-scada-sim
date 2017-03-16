@@ -3,7 +3,7 @@
 ## Running the Scada Simulator
 
 1. Install Docker + Docker Compose
-[Install Instructions](https://docs.docker.com/compose/install/)
++ [Install Instructions](https://docs.docker.com/compose/install/)
 
 2. Build & Run the containers
 ```bash
@@ -12,7 +12,7 @@
 [docker host]$ docker-compose run < docker-compose.yml
 ```
 
-##Notes:
+## Notes:
 - Capture the scada traffic by sniffing on docker 'scada-ot-1' network instarface
 ```bash
 [docker host]$ tcpdump -i br-$(docker network ls --filter "name=.*scada-ot-1" --format "{{.ID}}")
