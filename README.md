@@ -1,4 +1,5 @@
-# docker-compose-scada-sim
+# Docker Compose Scada Simulator
+This is a docker compose configuration for running a SCADA simulated environment.
 
 ## Running the Scada Simulator
 
@@ -18,7 +19,7 @@
 http://[docker host IP]:8080
 ```
 
-4. Load the configuration into Mango HMI
+4. Load the configuration into the HMI
     [Mango Config](https://github.com/sintax1/mango-automation-configs/blob/master/config.json)
 
 
