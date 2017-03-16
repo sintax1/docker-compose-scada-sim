@@ -17,6 +17,9 @@ This is a docker compose configuration for running a SCADA simulated environment
 3. Navigate to the Mango HMI
 ```
 http://[docker host IP]:8080
+
+username: admin
+password: admin
 ```
 
 4. Load the configuration into the HMI
