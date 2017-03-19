@@ -11,6 +11,7 @@ services:
       - plc1
     volumes:
       - /var/run/dbus:/var/run/dbus
+    hostname: hmi
 
   scadasim:
     build: https://github.com/sintax1/docker-scadasim.git
@@ -19,6 +20,7 @@ services:
       - scada-ot-1
     volumes:
       - /var/run/dbus:/var/run/dbus
+    hostname: scadasim
 
   plc1:
     build: https://github.com/sintax1/docker-scadasim-plc.git
@@ -27,6 +29,9 @@ services:
       - scada-ot-1
     volumes:
       - /var/run/dbus:/var/run/dbus
+    depends_on:
+      - "scadasim"
+    hostname: plc1
 
   plc2:
     build: https://github.com/sintax1/docker-scadasim-plc.git
@@ -35,6 +40,9 @@ services:
       - scada-ot-1
     volumes:
       - /var/run/dbus:/var/run/dbus
+    depends_on:
+      - "scadasim"
+    hostname: plc2
 
   plc3:
     build: https://github.com/sintax1/docker-scadasim-plc.git
@@ -43,6 +51,9 @@ services:
       - scada-ot-1
     volumes:
       - /var/run/dbus:/var/run/dbus
+    depends_on:
+      - "scadasim"
+    hostname: plc3
 
   chlorinatorplc:
     build: https://github.com/sintax1/docker-scadasim-plc.git
@@ -51,6 +62,9 @@ services:
       - scada-ot-1
     volumes:
       - /var/run/dbus:/var/run/dbus
+    depends_on:
+      - "scadasim"
+    hostname: chlorinatorplc
 
 networks:
   scada-ot-1:
