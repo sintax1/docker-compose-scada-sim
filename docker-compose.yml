@@ -9,36 +9,48 @@ services:
      - scada-ot-1
     links:
       - plc1
+    volumes:
+      - /var/run/dbus:/var/run/dbus
 
-  plc1:
+  scadasim:
     build: https://github.com/sintax1/docker-scadasim.git
     image: "sintax1/modbus-plc-simulator-master"
     networks:
       - scada-ot-1
+    volumes:
+      - /var/run/dbus:/var/run/dbus
 
   plc1:
     build: https://github.com/sintax1/docker-scadasim-plc.git
     image: "sintax1/modbus-plc-simulator-1"
     networks:
       - scada-ot-1
+    volumes:
+      - /var/run/dbus:/var/run/dbus
 
   plc2:
     build: https://github.com/sintax1/docker-scadasim-plc.git
     image: "sintax1/modbus-plc-simulator-2"
     networks:
       - scada-ot-1
+    volumes:
+      - /var/run/dbus:/var/run/dbus
 
   plc3:
     build: https://github.com/sintax1/docker-scadasim-plc.git
     image: "sintax1/modbus-plc-simulator-3"
     networks:
       - scada-ot-1
+    volumes:
+      - /var/run/dbus:/var/run/dbus
 
   chlorinatorplc:
     build: https://github.com/sintax1/docker-scadasim-plc.git
     image: "sintax1/modbus-plc-simulator-4"
     networks:
       - scada-ot-1
+    volumes:
+      - /var/run/dbus:/var/run/dbus
 
 networks:
   scada-ot-1:
