@@ -22,7 +22,7 @@ username: admin
 password: admin
 ```
 
-4. Load a configuration into the HMI
+4. Load a configuration into the HMI, or build your own through Mango
 
      [Water Plant config](https://github.com/sintax1/mango-automation-configs/blob/master/config.json)
 
@@ -36,7 +36,7 @@ http://[docker host IP]:8080/dashboards/settings/import-export
 ```
 
 ## Notes
-### Capture the scada traffic by sniffing on docker 'scada-ot-1' network interface
+### Capture the scada (Modbus/TCP) traffic by sniffing on docker 'scada-ot-1' network interface
 ```bash
 [docker host]$ tcpdump -i br-$(docker network ls --filter "name=.*scada-ot-1" --format "{{.ID}}")
 ```
