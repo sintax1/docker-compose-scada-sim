@@ -24,6 +24,7 @@ services:
     entrypoint: ["python", "-i", "run.py", "-c", "/scadasim_configs/scadasim_config.yml", "-d"]
     hostname: scadasim
     tty: true
+    stdin_open: true
 
   plc1:
     build: https://github.com/sintax1/docker-scadasim-plc.git
@@ -68,6 +69,15 @@ services:
     depends_on:
       - "scadasim"
     hostname: chlorinatorplc
+
+  attack:
+    build: https://github.com/sintax1/docker-scadasim-attack.git
+    image: "sintax1/scadasim-attack"
+    networks:
+      - scada-ot-1
+    hostname: attack
+    tty: true
+    stdin_open: true
 
 networks:
   scada-ot-1:
