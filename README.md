@@ -9,8 +9,8 @@ This is a docker compose configuration for running a SCADA simulated environment
 
 2. Build & Run the containers
 ```bash
-[docker host]$ git clone https://github.com/sintax1/docker-compose-scada-sim.git
-[docker host]$ cd docker-compose-scada-sim
+[docker host]$ git clone https://github.com/sintax1/docker-compose-scadasim.git
+[docker host]$ cd docker-compose-scadasim
 [docker host]$ docker-compose up
 ```
 
