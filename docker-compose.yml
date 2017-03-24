@@ -11,8 +11,32 @@ services:
       - plc1
 
   plc1:
-    build: https://github.com/sintax1/docker-modbus-plc-simulator.git
+    build: https://github.com/sintax1/scadasim.git
+    image: "sintax1/modbus-plc-simulator-master"
+    networks:
+      - scada-ot-1
+
+  plc1:
+    build: https://github.com/sintax1/scadasim-plc.git
     image: "sintax1/modbus-plc-simulator-1"
+    networks:
+      - scada-ot-1
+
+  plc2:
+    build: https://github.com/sintax1/scadasim-plc.git
+    image: "sintax1/modbus-plc-simulator-2"
+    networks:
+      - scada-ot-1
+
+  plc3:
+    build: https://github.com/sintax1/scadasim-plc.git
+    image: "sintax1/modbus-plc-simulator-3"
+    networks:
+      - scada-ot-1
+
+  chlorinatorplc:
+    build: https://github.com/sintax1/scadasim-plc.git
+    image: "sintax1/modbus-plc-simulator-4"
     networks:
       - scada-ot-1
 
