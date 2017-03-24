@@ -19,7 +19,9 @@ services:
     networks:
       - scada-ot-1
     volumes:
+      - ./scadasim_configs:/scadasim_configs/
       - /var/run/dbus:/var/run/dbus
+    entrypoint: ["python", "-i", "run.py", "-c", "/scadasim_configs/scadasim_config.yml", "-d"]
     hostname: scadasim
 
   plc1:
