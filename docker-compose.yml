@@ -23,6 +23,7 @@ services:
       - /var/run/dbus:/var/run/dbus
     entrypoint: ["python", "-i", "run.py", "-c", "/scadasim_configs/scadasim_config.yml", "-d"]
     hostname: scadasim
+    tty: true
 
   plc1:
     build: https://github.com/sintax1/docker-scadasim-plc.git
